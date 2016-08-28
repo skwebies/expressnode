@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+//Route for speakers list
 router.get('/speakers', function(req, res) {
   var data = req.app.get('appData');
   var pagePhotos = [];
@@ -18,6 +19,7 @@ router.get('/speakers', function(req, res) {
   });
 });
 
+//Route for specific speakers
 router.get('/speakers/:speakerid', function(req, res) {
   var data = req.app.get('appData');
   var pagePhotos = [];
